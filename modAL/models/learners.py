@@ -485,7 +485,7 @@ class CommitteeRegressor(BaseCommittee):
         if not return_std:
             return np.mean(vote, axis=1)
         else:
-            return np.mean(vote, axis=1), np.std(vote, axis=1)
+            return np.mean(vote, axis=1), np.std(vote, axis=1), vote, np.var(vote, axis=1)
 
     def vote(self, X: modALinput, **predict_kwargs):
         """
